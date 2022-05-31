@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Power Scaler Character Sheet</title>
+        <link rel="stylesheet" href="guts/sheetstyle.css">
+        <link rel="icon" type="image/x-icon" href="guts/favicon.ico">
+        <script type="text/javascript" src="guts/main.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="header">
+                
+                <img id="headerImg" width="100%" src="defaultpfp.jpg" alt="Character Icon" />
+                <!-- replace the image in src="" with your chosen profile image -->
+                <!-- NOTE: THE IMAGE MUST HAVE A 1:1 ASPECT RATIO OR IT WON'T LOOK RIGHT -->
+                <textarea id="title" placeholder="Type name here..."></textarea>
+                
+                <textarea id="subtitle" placeholder="Type codename here..."></textarea> 
+                <div id="reputation">
+                    Reputation: 
+                </div>
+                <input id="reputationNum" type="number" value="0" max="20" min="-20">
+                
+                <div id="rank">
+                    Rank: 
+                </div>
+                <input id="rankNum" type="number" value="0" min="0">
+
+                <textarea id="bodyType" placeholder="Body type here..."></textarea>
+            </div>
+        </div>
+        
+        <hr>
+
+        <div class="container"> <!-- HITBOX CONTAINER -->
+            <div id="hitBoxWrapper">
+                <div id="hitBoxTitle">
+                    Hit Boxes:
+                </div>
+                <div id="hitBoxValue">
+                    Alive <input type="checkbox" id="box1"><input type="checkbox" id="box2"><input type="checkbox" id="box3"><input type="checkbox" id="box4"><input type="checkbox" id="box5"><input type="checkbox" id="box6"><input type="checkbox" id="box7"><input type="checkbox" id="box8"><input type="checkbox" id="box9"><input type="checkbox" id="box10"> Dead &#9760; <button id="healUp" title="Heal all hitboxes">Heal</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container"> <!-- CONTENT CONTAINER -->
+            <div id="strandColumn"> <!-- STRANDS CONTAINER -->
+                <input type="number" min="-1" id="brawnNum" value="">
+                <span id="brawn">Brawn</span>
+                <input type="number" min="-1" id="heartNum" value="">
+                <span id="heart">Heart</span>
+                <input type="number" min="-1" id="knackNum" value="">
+                <span id="knack">Knack</span>
+                <input type="number" min="-1" id="brainNum" value="">
+                <span id="brain">Brain</span>
+                <input type="number" min="-1" id="powerNum" value="">
+                <span id="power">Power</span><br>
+                <button id="save">Save</button>
+            </div>
+            <div id="skillColumn"> <!-- SKILLS CONTAINER -->
+                <div id="skillsBrawn">
+                    &#10147; Protect Those in Need <br>
+                    &#10147; Show Off Muscles
+                </div>
+                <div id="skillsHeart">
+                    &#10147; Steel Your Mind <br>
+                    &#10147; Act Charismatic <br>
+                    &#10147; Work as a Team
+                </div>
+                <div id="skillsKnack">
+                    &#10147; Dash Into Action <br>
+                    &#10147; Avoid Detection
+                </div>
+                <div id="skillsBrain">
+                    &#10147; Investigate Activity <br>
+                    &#10147; Identify the Threat <br>
+                    &#10147; Use Some Equipment
+                </div>
+                <div id="skillsPower">
+                    &#10147; Exploit Power
+                </div>
+            </div>
+            <div id="inputFields"> <!-- INPUTS CONTAINER -->
+                <div id="equipmentTitle">
+                    Equipment
+                </div>
+                <div id="equipmentBody">
+                    <textarea name="text" wrap="soft" resize="none" id="equipmentBox"></textarea>
+                </div>
+
+                <div id="powerDescTitle">
+                    Power Description
+                </div>
+                <div id="powerDescBody">
+                    <textarea name="text" wrap="soft" resize="none" id="powerBox"> </textarea>
+                </div>
+
+                <div id="kickerTitle">
+                    Kicker Proficiencies
+                </div>
+                <div id="kickerBody">
+                    <textarea name="text" wrap="soft" resize="none" id="kickerBox"> </textarea>
+                </div>
+
+                <div id="bodyFeatTitle">
+                    Body Feature
+                </div>
+                <div id="bodyFeatBody">
+                    <textarea name="text" wrap="soft" resize="none" id="bodyBox"> </textarea>
+                </div>
+            </div>
+            
+        </div>
+        
+
+    </body>
+
+
+</html>
+
+<!-- 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣶⣿⣿⣷⣶⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣾⣿⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⡟⠁⣰⣿⣿⣿⡿⠿⠻⠿⣿⣿⣿⣿⣧⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⠏⠀⣴⣿⣿⣿⠉⠀⠀⠀⠀⠀⠈⢻⣿⣿⣇⠀⠀⠀
+⠀⠀⠀⠀⢀⣠⣼⣿⣿⡏⠀⢠⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⡀⠀⠀
+⠀⠀⠀⣰⣿⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀
+⠀⠀⢰⣿⣿⡿⣿⣿⣿⡇⠀⠘⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⢀⣸⣿⣿⣿⠁⠀⠀
+⠀⠀⣿⣿⣿⠁⣿⣿⣿⡇⠀⠀⠻⣿⣿⣿⣷⣶⣶⣶⣶⣶⣿⣿⣿⣿⠃⠀⠀⠀
+⠀⢰⣿⣿⡇⠀⣿⣿⣿⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀
+⠀⢸⣿⣿⡇⠀⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠉⢉⣿⣿⠀⠀⠀⠀⠀⠀
+⠀⢸⣿⣿⣇⠀⣿⣿⣿⠀⠀⠀⠀⠀⢀⣤⣤⣤⡀⠀⠀⢸⣿⣿⣿⣷⣦⠀⠀⠀
+⠀⠀⢻⣿⣿⣶⣿⣿⣿⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣦⡀⠀⠉⠉⠻⣿⣿⡇⠀⠀
+⠀⠀⠀⠛⠿⣿⣿⣿⣿⣷⣤⡀⠀⠀⠀⠀⠈⠹⣿⣿⣇⣀⠀⣠⣾⣿⣿⡇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣦⣤⣤⣤⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢿⣿⣿⣿⣿⣿⣿⠿⠋⠉⠛⠋⠉⠉⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠁
+-->

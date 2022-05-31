@@ -1,0 +1,261 @@
+body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+textarea {resize: none;}
+
+.container {
+    width: 8.5in;
+    
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 50px 50px 50% 25% 25% 50px;
+    grid-template-rows: 50px 50px;
+    grid-gap: 10px;
+    padding-left: 10px;
+}
+
+#headerImg {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border: 2px #0b0b0b solid;
+    background-color: #989898;
+}
+
+#title {
+    display: grid;
+    grid-column: 3;
+    grid-row: 1;
+    align-items: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+#subtitle {
+    display: grid;
+    grid-column: 3;
+    grid-row: 2;
+    padding-left: 10px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#reputation {
+    display: grid;
+    grid-column: 5;
+    grid-row: 1;
+    padding-left: 10px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: right;
+}
+
+#reputationNum {
+    display: grid;
+    grid-column: 6;
+    grid-row: 1;
+}
+
+#rank {
+    display: grid;
+    grid-column: 5;
+    grid-row: 2;
+    padding-left: 10px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: right;
+}
+
+#rankNum {
+    display: grid;
+    grid-column: 6;
+    grid-row: 2;
+}
+
+#bodyType {
+    display: grid;
+    grid-column: 4;
+    grid-row: 1;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+}
+
+#bodyTypeForm {
+    grid-column: 4;
+    grid-row: 2;
+    font-size: 18px;
+    align-items: center;
+}
+
+#strandColumn {
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: 100px 25px 100px 25px 100px 25px 100px 25px 100px 25px;
+    font-weight: bold;
+    text-align: center;
+    float: left;
+    padding-right: 10px;
+    border-right: 6px #000 solid;
+}
+
+input[type=number] {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#skillColumn {
+    float: left;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: 100%;
+    grid-template-rows: 125px 125px 125px 125px 125px;
+    display: grid;
+    border-right: 6px solid #000;
+}
+
+#skillsBrawn {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    align-items: center;
+}
+
+#skillsHeart {
+    display: grid;
+    grid-column: 1;
+    grid-row: 2;
+    align-items: center;
+}
+
+#skillsKnack {
+    display: grid;
+    grid-column: 1;
+    grid-row: 3;
+    align-items: center;
+}
+
+#skillsBrain {
+    display: grid;
+    grid-column: 1;
+    grid-row: 4;
+    align-items: center;
+}
+
+#skillsPower {
+    display: grid;
+    grid-column: 1;
+    grid-row: 5;
+    align-items: center;
+}
+
+#inputFields {
+    display: grid;
+    grid-template-columns: 312.5px 312.5px;
+    grid-template-rows: 25px 287.5px 25px 287.5px;
+    padding-left: 10px;
+}
+
+#inputFields textarea {
+    height: 99%;
+    width: 99%;
+}
+
+#equipmentTitle {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#equipmentBody {
+    display: grid;
+    grid-column: 1;
+    grid-row: 2
+}
+
+#powerDescTitle {
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+#powerDescBody {
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    padding-left: 10px;
+}
+
+#kickerTitle {
+    display: grid;
+    grid-column: 1;
+    grid-row: 3;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+#kickerBody {
+    display: grid;
+    grid-column: 1;
+    grid-row: 4;
+    padding-top: 10px;
+}
+
+#bodyFeatTitle {
+    display: grid;
+    grid-column: 2;
+    grid-row: 3;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#bodyFeatBody {
+    display: grid;
+    grid-column: 2;
+    grid-row: 4;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#hitBoxWrapper {
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    line-height: 30px;
+}
+
+#hitBoxTitle {
+    height: 100%;
+    float: left;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#hitBoxValue {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding-left: 20px;
+}
+
+#healUp {
+    background-color: aquamarine;
+}
