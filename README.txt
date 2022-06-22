@@ -36,8 +36,8 @@ v1.0 28/4/22: Created HTML layout, created non-saving fillable forms
 
 Future Plans
 Clean up HTML & perform general orc-bodge removal
-Change how input data is saved to prevent data loss
 Fix the dice roller output so it doesn't sort weirdly
+Change how input data is saved to prevent data loss
 Implement better graphics to sheet, maybe customisability
 Mobile app?
 

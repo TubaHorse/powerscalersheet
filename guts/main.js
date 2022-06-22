@@ -126,11 +126,13 @@ function update() {
     console.log("Updating");
 }
 
+/* Clears localStorage values, removing any saved intormation */
 function clear() {
     console.log("Clearing...")
     localStorage.clear();
 }
 
+/* Clears hitbox selections */
 function clearHitBox() {
     console.log("Healing");
     var box1Value = document.getElementById('box1').checked = false;
@@ -155,9 +157,128 @@ function clearHitBox() {
     window.localStorage.setItem(box10Key, box10Value);
 }
 
+/* Dice roller formula */
+function getRandomInt(max) {
+    return Math.floor(((Math.random() * max)+1)+((Math.random() * max)+1));
+}
+
+/* Rolls brawn stat */
+function rollBrawn() {
+    if (document.getElementById("useKicker").checked == true) {
+        kickerBonus = 1;
+        star = ' ★';
+    } else {
+        kickerBonus = 0;
+        star = '';
+    }
+    var statRoll = window.localStorage.getItem(brawnKey);
+    console.log(`Rolling brawn`);
+    new Audio('guts/dice.wav').play();
+    var result = getRandomInt(8)+Number(statRoll)+kickerBonus;
+    document.getElementById("useKicker").checked = false;
+    addRoll("Brawn: ",result,star);
+    console.log(result, star);
+}
+
+/* Rolls heart stat */
+function rollHeart() {
+    if (document.getElementById("useKicker").checked == true) {
+        kickerBonus = 1;
+        star = ' ★';
+    } else {
+        kickerBonus = 0;
+        star = '';
+    }
+    var statRoll = window.localStorage.getItem(heartKey);
+    console.log(`Rolling heart`);
+    new Audio('guts/dice.wav').play();
+    var result = getRandomInt(8)+Number(statRoll)+kickerBonus;
+    document.getElementById("useKicker").checked = false;
+    addRoll("Heart: ",result,star);
+    console.log(result, star);
+}
+
+/* Rolls knack stat */
+function rollKnack() {
+    if (document.getElementById("useKicker").checked == true) {
+        kickerBonus = 1;
+        star = ' ★';
+    } else {
+        kickerBonus = 0;
+        star = '';
+    }
+    var statRoll = window.localStorage.getItem(knackKey);
+    console.log(`Rolling knack`);
+    new Audio('guts/dice.wav').play();
+    var result = getRandomInt(8)+Number(statRoll)+kickerBonus;
+    document.getElementById("useKicker").checked = false;
+    addRoll("Knack: ",result,star);
+    console.log(result, star);
+}
+
+/* Rolls mind stat */
+function rollBrain() {
+    if (document.getElementById("useKicker").checked == true) {
+        kickerBonus = 1;
+        star = ' ★';
+    } else {
+        kickerBonus = 0;
+        star = '';
+    }
+    var statRoll = window.localStorage.getItem(brainKey);
+    console.log(`Rolling brain`);
+    new Audio('guts/dice.wav').play();
+    var result = getRandomInt(8)+Number(statRoll)+kickerBonus;
+    document.getElementById("useKicker").checked = false;
+    addRoll("Brain: ",result,star);
+    console.log(result, star);
+}
+
+/* Rolls power stat */
+function rollPower() {
+    if (document.getElementById("useKicker").checked == true) {
+        kickerBonus = 1;
+        star = ' ★';
+    } else {
+        kickerBonus = 0;
+        star = '';
+    }
+    var statRoll = window.localStorage.getItem(powerKey);
+    console.log(`Rolling power`);
+    new Audio('guts/dice.wav').play();
+    var result = getRandomInt(8)+Number(statRoll)+kickerBonus;
+    document.getElementById("useKicker").checked = false;
+    addRoll("Power: ",result,star);
+    console.log(result, star);
+}
+
+/* Removes logged rolls to prevent overflow */
+function clearRolls() {
+    var lis = document.querySelectorAll('#rollOutputColumn li');
+    for(var i=0; li=lis[i]; i++) {
+        li.parentNode.removeChild(li);
+    }
+}
+
+/* Adds rolls to ul with id rollOutputColumn */
+function addRoll(name, result, star) {
+    var ul = document.getElementById("rollOutputColumn");
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(name + result + star));
+    ul.appendChild(li);
+}
+
+/* Ensures all elements are loaded */
 window.onload =function(){
     console.log("Initializing...");
     update();
     document.getElementById("save").onclick = save;
     document.getElementById("healUp").onclick = clearHitBox;
+    document.getElementById("brawn").onclick = rollBrawn;
+    document.getElementById("heart").onclick = rollHeart;
+    document.getElementById("knack").onclick = rollKnack;
+    document.getElementById("brain").onclick = rollBrain;
+    document.getElementById("power").onclick = rollPower;
+    document.getElementById("power").onclick = rollPower;
+    document.getElementById("clearRoll").onclick = clearRolls;
 }
