@@ -14,18 +14,18 @@
                 <img id="headerImg" width="100%" src="defaultpfp.jpg" alt="Character Icon" />
                 <!-- replace the image in src="" with your chosen profile image -->
                 <!-- NOTE: THE IMAGE MUST HAVE A 1:1 ASPECT RATIO OR IT WON'T LOOK RIGHT -->
-                <textarea id="title" placeholder="Type name here..."></textarea>
+                <textarea id="title" placeholder="Type name here..." class="description"></textarea>
                 
-                <textarea id="subtitle" placeholder="Type codename here..."></textarea> 
+                <textarea id="subtitle" placeholder="Type codename here..." class="description"></textarea> 
                 <div id="reputation">
                     Reputation: 
                 </div>
-                <input id="reputationNum" type="number" value="0" max="20" min="-20">
+                <input id="reputationNum" type="number" value="0" max="20" min="-20" class="stats">
                 
                 <div id="rank">
                     Rank: 
                 </div>
-                <input id="rankNum" type="number" value="0" min="0">
+                <input id="rankNum" type="number" value="0" min="0" class="stats">
 
                 <textarea id="bodyType" placeholder="Body type here..."></textarea>
             </div>
@@ -39,7 +39,7 @@
                     Hit Boxes:
                 </div>
                 <div id="hitBoxValue">
-                    Alive <input type="checkbox" id="box1"><input type="checkbox" id="box2"><input type="checkbox" id="box3"><input type="checkbox" id="box4"><input type="checkbox" id="box5"><input type="checkbox" id="box6"><input type="checkbox" id="box7"><input type="checkbox" id="box8"><input type="checkbox" id="box9"><input type="checkbox" id="box10"> Dead &#9760; <button id="healUp" title="Heal all hitboxes">Heal</button>
+                    Alive <input type="checkbox" id="box1" class="Health"><input type="checkbox" id="box2" class="Health"><input type="checkbox" id="box3" class="Health"><input type="checkbox" id="box4" class="Health"><input type="checkbox" id="box5" class="Health"><input type="checkbox" id="box6" class="Health"><input type="checkbox" id="box7" class="Health"><input type="checkbox" id="box8" class="Health"><input type="checkbox" id="box9" class="Health"><input type="checkbox" id="box10" class="Health"> Dead &#9760; <button id="healUp" title="Heal all hitboxes">Heal</button>
                 </div>
             </div>
         </div>
@@ -49,15 +49,15 @@
         <div class="container"> <!-- CONTENT CONTAINER -->
             
             <div id="strandColumn"> <!-- STRANDS CONTAINER -->
-                <input type="number" min="-1" id="brawnNum" value="">
+                <input type="number" min="-1" id="brawnNum" value="" class="stats">
                 <button id="brawn">Brawn</button>
-                <input type="number" min="-1" id="heartNum" value="">
+                <input type="number" min="-1" id="heartNum" value="" class="stats">
                 <button id="heart">Heart</button>
-                <input type="number" min="-1" id="knackNum" value="">
+                <input type="number" min="-1" id="knackNum" value="" class="stats">
                 <button id="knack">Knack</button>
-                <input type="number" min="-1" id="brainNum" value="">
+                <input type="number" min="-1" id="brainNum" value="" class="stats">
                 <button id="brain">Brain</button>
-                <input type="number" min="-1" id="powerNum" value="">
+                <input type="number" min="-1" id="powerNum" value="" class="stats">
                 <button id="power">Power</button><br>
                 <button id="save">Save</button>
             </div>
@@ -89,21 +89,21 @@
                     Equipment
                 </div>
                 <div id="equipmentBody">
-                    <textarea name="text" wrap="soft" resize="none" id="equipmentBox"></textarea>
+                    <textarea name="text" wrap="soft" resize="none" id="equipmentBox" class="description"></textarea>
                 </div>
 
                 <div id="powerDescTitle">
                     Power Description
                 </div>
                 <div id="powerDescBody">
-                    <textarea name="text" wrap="soft" resize="none" id="powerBox"> </textarea>
+                    <textarea name="text" wrap="soft" resize="none" id="powerBox" class="description"> </textarea>
                 </div>
 
                 <div id="kickerTitle">
                     Kicker Proficiencies 
                 </div>
                 <div id="kickerBody">
-                    <textarea name="text" wrap="soft" resize="none" id="kickerBox"> </textarea>
+                    <textarea name="text" wrap="soft" resize="none" id="kickerBox" class="description"> </textarea>
                 </div>
 
                 <div id="kickerQuery">Use Kicker?<input type="checkbox" id="useKicker" value="Use Kicker?"></div>
@@ -113,7 +113,7 @@
                     Body Feature
                 </div>
                 <div id="bodyFeatBody">
-                    <textarea name="text" wrap="soft" resize="none" id="bodyBox"> </textarea>
+                    <textarea name="text" wrap="soft" resize="none" id="bodyBox" class="description"> </textarea>
                 </div>
                 <ul id="rollOutputColumn"></ul><button id="clearRoll">Clear Rolls</button>
                 
