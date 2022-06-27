@@ -8,7 +8,7 @@ textarea {resize: none;}
 
 .header {
     display: grid;
-    grid-template-columns: 50px 50px 50% 25% 25% 50px;
+    grid-template-columns: 50px 50px 50% 25% 25% 75px;
     grid-template-rows: 50px 50px;
     grid-gap: 10px;
     padding-left: 10px;
@@ -160,8 +160,8 @@ input[type=number] {
 
 #inputFields {
     display: grid;
-    grid-template-columns: 312.5px 312.5px;
-    grid-template-rows: 25px 287.5px 25px 287.5px;
+    grid-template-columns: 312.5px 312.5px 200px;
+    grid-template-rows: 25px 287.5px 25px 287.5px 25px;
     padding-left: 10px;
 }
 
@@ -216,6 +216,14 @@ input[type=number] {
     padding-top: 10px;
 }
 
+#kickerQuery {
+    margin-top: 10px;
+    text-align: center;
+    display: inline;
+    grid-column: 1;
+    grid-row: 5;
+}
+
 #bodyFeatTitle {
     display: grid;
     grid-column: 2;
@@ -247,6 +255,29 @@ input[type=number] {
     padding-left: 10px;
     font-weight: bold;
     font-size: 18px;
+}
+
+#rollOutputColumn {
+    margin: 0;
+    padding: 5px;
+    margin-left: 10px;
+    list-style-type: none;
+    border: #000 1px solid;
+    display: grid;
+    grid-column: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+#clearRoll {
+    display: grid;
+    grid-column: 3;
+    grid-row: 5;
+    margin-left: 10px;
+}
+
+#rollOutputColumn li {
+    display: inline;
 }
 
 #hitBoxValue {
