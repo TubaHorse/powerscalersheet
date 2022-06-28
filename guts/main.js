@@ -1,7 +1,7 @@
 // Defines constant keys
-const statKeys = document.getElementsByClassName(stats)
-const descKeys = document.getElementsByClassName(description)
-const HPKeys = document.getElementsByClassName(Health)
+const statKeys = document.getElementsByClassName("stats")
+const descKeys = document.getElementsByClassName("description")
+const HPKeys = document.getElementsByClassName("Health")
 // This saves all input information using localStorage
 function save() {
     for (i=0; i<statKeys.length; i++) {
@@ -65,7 +65,7 @@ function rollBrawn() {
         kickerBonus = 0;
         star = '';
     }
-    var statRoll = window.localStorage.getItem(statKeys.find(i => i.id === "brawnNum"));
+    var statRoll = window.localStorage.getItem(statKeys.namedItem("brawnNum"));
     console.log(`Rolling brawn`);
     new Audio('guts/dice.wav').play();
     var result = getRandomInt(8)+Number(statRoll)+kickerBonus;
@@ -83,7 +83,7 @@ function rollHeart() {
         kickerBonus = 0;
         star = '';
     }
-    var statRoll = window.localStorage.getItem(statKeys.find(i => i.id === "heartNum"));
+    var statRoll = window.localStorage.getItem(statKeys.namedItem("heartNum"));
     console.log(`Rolling heart`);
     new Audio('guts/dice.wav').play();
     var result = getRandomInt(8)+Number(statRoll)+kickerBonus;
@@ -101,7 +101,7 @@ function rollKnack() {
         kickerBonus = 0;
         star = '';
     }
-    var statRoll = window.localStorage.getItem(statKeys.find(i => i.id === "knackNum"));
+    var statRoll = window.localStorage.getItem(statKeys.namedItem("knackNum"));
     console.log(`Rolling knack`);
     new Audio('guts/dice.wav').play();
     var result = getRandomInt(8)+Number(statRoll)+kickerBonus;
@@ -119,7 +119,7 @@ function rollBrain() {
         kickerBonus = 0;
         star = '';
     }
-    var statRoll = window.localStorage.getItem(statKeys.find(i => i.id === "brainNum"));
+    var statRoll = window.localStorage.getItem(statKeys.namedItem("brainNum"));
     console.log(`Rolling brain`);
     new Audio('guts/dice.wav').play();
     var result = getRandomInt(8)+Number(statRoll)+kickerBonus;
@@ -137,7 +137,7 @@ function rollPower() {
         kickerBonus = 0;
         star = '';
     }
-    var statRoll = window.localStorage.getItem(statKeys.find(i => i.id === "powerNum"));
+    var statRoll = window.localStorage.getItem(statKeys.namedItem("powerNum"));
     console.log(`Rolling power`);
     new Audio('guts/dice.wav').play();
     var result = getRandomInt(8)+Number(statRoll)+kickerBonus;
